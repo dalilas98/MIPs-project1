@@ -1,10 +1,11 @@
 .data #variables 
-	myID: .asciiz  "@02820530 \n"
-	myName: .asciiz "Scott,Dalila \n"
+	myID: .word     0002820530
+	
 
 .text
-	li $v0, 4 #4 prints strings 
-	li $v0, 4
-	la $a0, myID
-	la $a0, myName
+	li $a0, '@'
+	li $v0, 11
 	syscall 
+	lw $a0, myID
+	li $v0, 1
+	syscall

@@ -17,7 +17,7 @@
 	li $a0, 0
 	addi $a0, $a0, 10
 	syscall
-	addi $a0, $a0, 73
+	addi $a0, $a0, 73   #S
 	syscall
 	addi $a0,$a0, 16     # c (99)
     	syscall
